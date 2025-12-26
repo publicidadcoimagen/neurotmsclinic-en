@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Repetitive Transcranial Magnetic Stimulation Clinic in Tijuana</title>
-  <meta name="description" content="Informational and administrative support to book appointments and answer general questions about our services." />
+  <title>Transcranial Magnetic Stimulation Clinic in Tijuana | Book an appointment</title>
+  <meta name="description" content="Transcranial Magnetic Stimulation clinic in Tijuana. Informational and administrative support for scheduling. Book in minutes." />
   <meta name="robots" content="index, follow" />
   <style>
     :root{
@@ -15,6 +15,7 @@
       --muted:rgba(240,246,255,.72);
       --brand:#4f8cff;
       --brand2:#7dd3ff;
+      --ok:#58d68d;
       --shadow: 0 20px 60px rgba(0,0,0,.45);
       --radius:18px;
     }
@@ -31,8 +32,6 @@
     }
     a{color:var(--brand2); text-decoration:none}
     a:hover{text-decoration:underline}
-
-    /* ✅ CHANGE: full viewport + responsive padding + vertical centering */
     .wrap{
       max-width:1200px;
       margin:0 auto;
@@ -41,8 +40,6 @@
       display:flex;
       align-items:center;
     }
-
-    /* ✅ CHANGE: shell always full width */
     .shell{
       width:100%;
       border:1px solid var(--border);
@@ -51,7 +48,6 @@
       border-radius: var(--radius);
       overflow:hidden;
     }
-
     .topbar{
       padding:22px 22px 10px;
       display:flex; align-items:center; justify-content:space-between; gap:16px;
@@ -65,12 +61,7 @@
       overflow:hidden;
       flex:0 0 auto;
     }
-    .logo img{
-      max-width:100%;
-      max-height:100%;
-      object-fit:contain;
-    }
-    .btxt{min-width:0}
+    .logo img{max-width:100%; max-height:100%; object-fit:contain}
     .btxt h1{font-size:18px; margin:0; letter-spacing:.2px}
     .btxt p{margin:4px 0 0; color:var(--muted); font-size:13px}
     .pill{
@@ -81,21 +72,14 @@
       font-size:12px; color:var(--muted);
       white-space:nowrap;
     }
-
     .hero{
-      padding:18px 22px 28px;
+      padding:18px 22px 18px;
       display:grid;
       grid-template-columns: 1.25fr .75fr;
       gap:18px;
     }
-
-    /* ✅ CHANGE: tablet collapses to 1 column */
-    @media (max-width: 1024px){
-      .hero{grid-template-columns:1fr}
-    }
-    @media (max-width: 860px){
-      .pill{display:none}
-    }
+    @media (max-width: 1024px){ .hero{grid-template-columns:1fr} }
+    @media (max-width: 860px){ .pill{display:none} }
 
     .hcard{
       border:1px solid var(--border);
@@ -103,8 +87,17 @@
       border-radius: var(--radius);
       padding:20px;
     }
-    .hcard h2{margin:0 0 10px; font-size:28px; line-height:1.15}
-    .hcard p{margin:0 0 14px; color:var(--muted); line-height:1.6}
+    .kicker{
+      display:inline-flex; align-items:center; gap:8px;
+      font-size:12px; color:rgba(240,246,255,.78);
+      border:1px solid rgba(255,255,255,.14);
+      background:rgba(0,0,0,.18);
+      padding:6px 10px; border-radius:999px;
+      margin-bottom:10px;
+    }
+    .dot{width:8px; height:8px; border-radius:99px; background:var(--ok); box-shadow:0 0 0 4px rgba(88,214,141,.15);}
+    .hcard h2{margin:0 0 10px; font-size:30px; line-height:1.12}
+    .hcard p{margin:0 0 14px; color:var(--muted); line-height:1.65}
     .cta{display:flex; gap:12px; flex-wrap:wrap; margin-top:10px}
     .btn{
       display:inline-flex; align-items:center; justify-content:center;
@@ -120,11 +113,21 @@
       border:none;
       box-shadow: 0 10px 30px rgba(79,140,255,.25);
     }
-    .btn.secondary{
-      background: rgba(0,0,0,.18);
-      color:var(--text);
-    }
+    .btn.secondary{ background: rgba(0,0,0,.18); color:var(--text); }
     .note{font-size:12.5px; color:var(--muted); margin-top:10px}
+    .mini{display:grid; gap:10px; margin-top:12px;}
+    .mini .row{display:flex; gap:10px; align-items:flex-start; color:var(--muted); font-size:13px; line-height:1.5;}
+    .mini .badge{
+      flex:0 0 auto;
+      width:26px; height:26px; border-radius:10px;
+      display:flex; align-items:center; justify-content:center;
+      border:1px solid rgba(255,255,255,.14);
+      background:rgba(0,0,0,.18);
+      color:rgba(240,246,255,.9);
+      font-weight:800;
+      font-size:12px;
+    }
+
     .grid{
       padding:0 22px 22px;
       display:grid;
@@ -139,8 +142,8 @@
       padding:18px;
     }
     .card h3{margin:0 0 8px; font-size:16px}
-    .card ul{margin:10px 0 0; padding-left:18px; color:var(--muted); line-height:1.65}
-    .card p{margin:8px 0 0; color:var(--muted); line-height:1.65}
+    .card p, .card li{color:var(--muted); line-height:1.65}
+    .card ul{margin:10px 0 0; padding-left:18px}
     .footer{
       padding:18px 22px;
       border-top:1px solid rgba(255,255,255,.12);
@@ -149,6 +152,12 @@
       font-size:13px;
     }
     .links{display:flex; gap:14px; flex-wrap:wrap}
+    .disclaimer{
+      padding:0 22px 22px;
+      color:rgba(240,246,255,.65);
+      font-size:12.5px;
+      line-height:1.6;
+    }
   </style>
 </head>
 <body>
@@ -169,9 +178,10 @@
 
       <div class="hero">
         <div class="hcard">
-          <h2>Innovation and hope for mental well-being</h2>
+          <div class="kicker"><span class="dot"></span> Book in minutes</div>
+          <h2>Professional care, clear and frictionless</h2>
           <p>
-            We help you book appointments, confirm visits, and answer general questions about our services.
+            We help you <strong>book</strong>, <strong>confirm</strong>, and get general information about our services.
             This website does not provide medical diagnosis or automated clinical decisions.
           </p>
 
@@ -183,6 +193,12 @@
               View full site
             </a>
             <a class="btn secondary" href="/privacy-policy">Privacy Policy</a>
+          </div>
+
+          <div class="mini">
+            <div class="row"><div class="badge">1</div><div>You submit your request (2–3 minutes).</div></div>
+            <div class="row"><div class="badge">2</div><div>We contact you to coordinate schedule and answer questions.</div></div>
+            <div class="row"><div class="badge">3</div><div>We confirm your appointment and provide administrative follow-up.</div></div>
           </div>
 
           <div class="note">
@@ -197,7 +213,7 @@
             Location: <span style="color:var(--muted);">Tijuana, Mexico</span>
           </p>
           <p style="margin:0; font-size:13px; color:var(--muted);">
-            Are you a patient? Book an appointment or request information using the form.
+            If you are already a patient, you can also use the form to confirm or reschedule.
           </p>
         </div>
       </div>
@@ -207,27 +223,32 @@
           <h3>What we do</h3>
           <ul>
             <li>General information about our services</li>
-            <li>Scheduling and confirmations</li>
+            <li>Scheduling, confirmations, and reminders</li>
             <li>Administrative follow-up</li>
           </ul>
         </div>
 
         <div class="card">
-          <h3>How it works</h3>
-          <ul>
-            <li>You submit your request</li>
-            <li>We contact you to coordinate</li>
-            <li>Your appointment is confirmed</li>
-          </ul>
+          <h3>Who this is for</h3>
+          <p>
+            For people looking for <strong>initial guidance</strong> and a clear view of the scheduling process.
+            Clinical evaluation happens only during consultation.
+          </p>
         </div>
 
         <div class="card">
-          <h3>Documents</h3>
+          <h3>Trust & transparency</h3>
           <p>
-            <a href="/privacy-policy">Privacy Policy</a><br>
-            <span style="color:var(--muted);">Transparency and consent for contact.</span>
+            • Contact consent<br>
+            • Responsible data handling<br>
+            • <a href="/privacy-policy">Privacy Policy</a>
           </p>
         </div>
+      </div>
+
+      <div class="disclaimer">
+        <strong>Notice:</strong> This website is for informational purposes only and does not replace medical advice.
+        In case of emergency, contact local emergency services.
       </div>
 
       <div class="footer">
