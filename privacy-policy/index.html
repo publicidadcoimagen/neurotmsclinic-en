@@ -1,69 +1,174 @@
-<link rel="icon" href="/assets/favicon-32.png" sizes="32x32" type="image/png">
-<link rel="icon" href="/assets/favicon-16.png" sizes="16x16" type="image/png">
-<link rel="shortcut icon" href="/assets/favicon.ico">
 <!doctype html>
 <html lang="en">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Privacy Policy | Neuro TMS Clinic</title>
+  <meta name="description" content="Privacy Policy for Neuro TMS Clinic. How we collect, use, and protect personal data, including WhatsApp communications and scheduling requests." />
   <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://neurotmsclinic.com/privacy-policy/" />
+
+  <!-- Favicon + Touch icon (make sure these exist in /assets) -->
+  <link rel="icon" href="/assets/favicon-32.png" sizes="32x32" type="image/png">
+  <link rel="icon" href="/assets/favicon-16.png" sizes="16x16" type="image/png">
+  <link rel="shortcut icon" href="/assets/favicon.ico">
+  <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png" sizes="180x180">
+
   <style>
-    body { font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; margin: 0; background:#0b1220; color:#eaf0ff;}
-    .wrap { max-width: 900px; margin: 0 auto; padding: 48px 20px; }
-    .card { background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.12); border-radius: 16px; padding: 24px; }
-    p,li { line-height: 1.6; color: rgba(234,240,255,0.9); }
-    a { color:#9ec0ff; }
-    .muted { color: rgba(234,240,255,0.7); }
+    :root{--bg1:#070b18;--bg2:#0b2a5f;--card:rgba(255,255,255,.07);--border:rgba(255,255,255,.14);--text:rgba(240,246,255,.92);--muted:rgba(240,246,255,.72);--brand:#4f8cff;--brand2:#7dd3ff;--shadow:0 20px 60px rgba(0,0,0,.45);--radius:18px;}
+    *{box-sizing:border-box}
+    body{margin:0;font-family:ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;color:var(--text);
+      background:radial-gradient(900px 600px at 20% 10%, rgba(79,140,255,.35), transparent 60%),
+      radial-gradient(800px 520px at 85% 20%, rgba(125,211,255,.22), transparent 55%),
+      linear-gradient(140deg,var(--bg1),var(--bg2));min-height:100vh;}
+    a{color:var(--brand2);text-decoration:none} a:hover{text-decoration:underline}
+    .wrap{max-width:1200px;margin:0 auto;padding:clamp(24px,5vw,72px) clamp(16px,4vw,32px);min-height:100vh;display:flex;align-items:center;}
+    .shell{width:100%;border:1px solid var(--border);background:linear-gradient(180deg, rgba(255,255,255,.08), rgba(255,255,255,.05));box-shadow:var(--shadow);border-radius:var(--radius);overflow:hidden;}
+    .topbar{padding:22px 22px 10px;display:flex;align-items:center;justify-content:space-between;gap:16px;}
+    .brand{display:flex;align-items:center;gap:14px;min-width:0}
+    .logo{width:56px;height:56px;border-radius:14px;border:1px solid rgba(255,255,255,.18);background:rgba(255,255,255,.06);display:flex;align-items:center;justify-content:center;overflow:hidden;flex:0 0 auto;}
+    .logo img{max-width:100%;max-height:100%;object-fit:contain}
+    .btxt h1{font-size:18px;margin:0;letter-spacing:.2px} .btxt p{margin:4px 0 0;color:var(--muted);font-size:13px}
+    .pill{padding:8px 12px;border:1px solid rgba(255,255,255,.18);background:rgba(0,0,0,.18);border-radius:999px;font-size:12px;color:var(--muted);white-space:nowrap;}
+    @media (max-width:860px){.pill{display:none}}
+    .content{padding:18px 22px 24px;display:grid;grid-template-columns:1.15fr .85fr;gap:18px;}
+    @media (max-width:1024px){.content{grid-template-columns:1fr}}
+    .card{border:1px solid var(--border);background:var(--card);border-radius:var(--radius);padding:20px;overflow:hidden;}
+    .card h2{margin:0 0 10px;font-size:28px;line-height:1.15}
+    .card h3{margin:18px 0 8px;font-size:16px}
+    .card p{margin:0 0 12px;color:var(--muted);line-height:1.75}
+    .card ul{margin:8px 0 0;padding-left:18px;color:var(--muted);line-height:1.75}
+    .box{border:1px dashed rgba(255,255,255,.22);border-radius:14px;padding:12px 14px;background:rgba(0,0,0,.18);color:var(--muted);line-height:1.7}
+    .cta{display:flex;gap:12px;flex-wrap:wrap;margin-top:12px}
+    .btn{display:inline-flex;align-items:center;justify-content:center;padding:12px 16px;border-radius:14px;font-weight:800;border:1px solid rgba(255,255,255,.18);text-decoration:none;white-space:nowrap;}
+    .btn.primary{background:linear-gradient(135deg,var(--brand),var(--brand2));color:#071021;border:none;box-shadow:0 10px 30px rgba(79,140,255,.25);}
+    .btn.secondary{background:rgba(0,0,0,.18);color:var(--text);}
+    @media (max-width:520px){.cta{flex-direction:column}.btn{width:100%;white-space:normal}}
+    .note{font-size:12.5px;color:var(--muted);margin-top:10px;line-height:1.6}
+    .footer{padding:18px 22px;border-top:1px solid rgba(255,255,255,.12);display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;color:rgba(240,246,255,.68);font-size:13px;}
+    .links{display:flex;gap:14px;flex-wrap:wrap}
   </style>
 </head>
 <body>
   <div class="wrap">
-    <div class="card">
-<a href="/">← Back</a>
-      <h1>Privacy Policy</h1>
-      <p class="muted">Last updated: <strong>May 15, 2024</strong></p>
+    <div class="shell">
+      <div class="topbar">
+        <div class="brand">
+          <div class="logo"><img src="/assets/LOGO CLINICA EMT INGLES.png" alt="Neuro TMS Clinic"></div>
+          <div class="btxt">
+            <h1>Transcranial Magnetic Stimulation Clinic</h1>
+            <p>Tijuana · Privacy Policy</p>
+          </div>
+        </div>
+        <div class="pill">Transparency · Consent · Data</div>
+      </div>
 
-      <p>This Privacy Policy explains how <strong>Neuro TMS Clinic</strong> (“we”) collects, uses, and protects personal data from users who interact with our website, forms, and communication channels (including WhatsApp).</p>
+      <div class="content">
+        <div class="card">
+          <h2>Privacy Policy</h2>
+          <p>
+            This Privacy Policy explains how Neuro TMS Clinic (the “Clinic”) collects, uses, and protects personal data when you interact with our forms, website, and communication channels (including WhatsApp).
+          </p>
 
-      <h2>1. Data Controller</h2>
-      <ul>
-        <li><strong>Controller:</strong> Neuro TMS Clinic</li>
-        <li><strong>Website:</strong> https://neurotmsclinic.com</li>
-        <li><strong>Contact:</strong> <span>info@neurotmsclinic.com</span></li>
-      </ul>
+          <div class="box">
+            <strong>Important:</strong> This website provides informational and administrative support (booking/confirmations). It does not provide medical diagnosis or automated clinical decisions.
+          </div>
 
-      <h2>2. Data We Collect</h2>
-      <p>We may collect: name, phone number, email address, and any contact details you voluntarily provide.</p>
-      <p>We do not provide medical diagnosis or automated clinical decisions through public forms or WhatsApp.</p>
+          <h3>Last updated</h3>
+          <p>May 15, 2024:contentReference[oaicite:6]{index=6}</p>
 
-      <h2>3. Purposes</h2>
-      <ul>
-        <li>Informational and administrative support</li>
-        <li>Scheduling, confirmations, and appointment reminders</li>
-        <li>Non-clinical follow-up</li>
-      </ul>
+          <h3>1) Data Controller</h3>
+          <p>
+            Controller: Transcranial Magnetic Stimulation Clinic Tijuana<br>
+            Website: https://neurotmsclinic.com/<br>
+            Contact: <strong>info@neurotmsclinic.com</strong>
+          </p>
 
-      <h2>4. WhatsApp</h2>
-      <p>We use WhatsApp only for <strong>informational and administrative</strong> communication. You consent when you tick the consent box on our forms or initiate contact.</p>
+          <h3>2) Data we may collect</h3>
+          <ul>
+            <li>Contact data: name, phone/WhatsApp, email.</li>
+            <li>Administrative details: availability/schedule and general inquiry topic.</li>
+            <li>Technical data: basic analytics/cookies if enabled.</li>
+          </ul>
 
-      <h2>5. Retention</h2>
-      <p>We retain data only as needed to fulfill the purposes above or while an active relationship exists, unless legally required otherwise.</p>
+          <h3>3) Purposes</h3>
+          <ul>
+            <li>Booking, confirming, or rescheduling appointments.</li>
+            <li>Providing general information about our services and process.</li>
+            <li>Administrative follow-up (reminders/confirmations).</li>
+            <li>Website/service improvement (if analytics is enabled).</li>
+          </ul>
 
-      <h2>6. Security</h2>
-      <p>We apply reasonable administrative, technical, and organizational safeguards to protect personal data.</p>
+          <h3>4) WhatsApp communications</h3>
+          <p>
+            WhatsApp is used as an <strong>informational and administrative</strong> channel.
+            We contact you via WhatsApp only if you provide consent through the form or request contact.
+          </p>
 
-      <h2>7. Sharing</h2>
-      <p>We do not share personal data with third parties except when required by law or necessary to provide services, under confidentiality where applicable.</p>
+          <h3>5) Sharing / third parties</h3>
+          <p>
+            We do not sell your personal data. We may use service providers (forms/hosting) strictly to operate the service, or disclose data if required by law.
+          </p>
 
-      <h2>8. Your Rights</h2>
-      <p>You may request access, correction, deletion, or objection by contacting us at the email above.</p>
+          <h3>6) Retention</h3>
+          <p>
+            We retain data for as long as needed to fulfill the purposes described or to comply with legal/administrative obligations.
+          </p>
 
-      <h2>9. Changes</h2>
-      <p>We may update this policy at any time by posting the new version on this page.</p>
+          <h3>7) Your rights</h3>
+          <p>
+            You may request access, correction, deletion, or objection regarding your personal data (subject to applicable law). Contact us at <strong>info@neurotmsclinic.com</strong>.
+          </p>
 
-      <p class="muted">Questions? Email: <strong>info@neurotmsclinic.com</strong></p>
+          <h3>8) Security</h3>
+          <p>
+            We apply reasonable technical and organizational measures designed to protect personal data against unauthorized access, loss, or misuse.
+          </p>
+
+          <h3>9) Policy updates</h3>
+          <p>
+            We may update this policy from time to time. The latest version will be published on this page.
+          </p>
+
+          <div class="cta">
+            <a class="btn primary" href="https://form.jotform.com/253035641475153" target="_blank" rel="noopener">Book / Request information</a>
+            <a class="btn secondary" href="/" rel="noopener">Back to landing</a>
+            <a class="btn secondary" href="https://clinica-de-estimulacion--tlmuejr.gamma.site/" target="_blank" rel="noopener">View full site</a>
+          </div>
+
+          <div class="note">
+            Questions about this policy? Email us at <strong>info@neurotmsclinic.com</strong>.
+          </div>
+        </div>
+
+        <div class="card">
+          <h3 style="margin:0 0 10px;">Directory</h3>
+          <ul>
+            <li><a href="/what-is-tms/">What is TMS?</a></li>
+            <li><a href="/how-it-works/">How it works</a></li>
+            <li><a href="/benefits/">Benefits</a></li>
+            <li><a href="/faq/">FAQ</a></li>
+            <li><a href="/location-hours/">Location & hours</a></li>
+          </ul>
+
+          <h3>Contact</h3>
+          <p>
+            Email: <strong>info@neurotmsclinic.com</strong><br>
+            Location: <span style="color:var(--muted);">Tijuana, Mexico</span>
+          </p>
+        </div>
+      </div>
+
+      <div class="footer">
+        <div>© <span id="y"></span> Neuro TMS Clinic</div>
+        <div class="links">
+          <a href="/">Home</a>
+          <a href="/faq/">FAQ</a>
+          <a href="/location-hours/">Location</a>
+        </div>
+      </div>
     </div>
   </div>
+  <script>document.getElementById('y').textContent=new Date().getFullYear();</script>
 </body>
 </html>
