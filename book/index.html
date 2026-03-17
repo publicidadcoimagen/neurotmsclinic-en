@@ -16,25 +16,35 @@
 
   <style>
     :root{
-      --bg1:#070b18; --bg2:#0b2a5f;
+      --bg1:#070b18;
+      --bg2:#0b2a5f;
       --card:rgba(255,255,255,.07);
       --border:rgba(255,255,255,.14);
       --text:rgba(240,246,255,.92);
       --muted:rgba(240,246,255,.72);
-      --brand:#4f8cff; --brand2:#7dd3ff;
-      --shadow: 0 20px 60px rgba(0,0,0,.45);
+      --brand:#4f8cff;
+      --brand2:#7dd3ff;
+      --shadow:0 20px 60px rgba(0,0,0,.45);
       --radius:18px;
 
       --surface:#ffffff;
       --surfaceText:#0b1220;
       --surfaceBorder:rgba(11,18,32,.12);
+
+      --warningBg:rgba(255,59,59,.12);
+      --warningBorder:rgba(255,59,59,.35);
+      --warningText:#ffd4d4;
     }
 
     *{box-sizing:border-box}
 
+    html{
+      scroll-behavior:smooth;
+    }
+
     body{
       margin:0;
-      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      font-family:ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
       color:var(--text);
       background:
         radial-gradient(900px 600px at 20% 10%, rgba(79,140,255,.35), transparent 60%),
@@ -43,13 +53,19 @@
       min-height:100vh;
     }
 
-    a{color:var(--brand2); text-decoration:none}
-    a:hover{text-decoration:underline}
+    a{
+      color:var(--brand2);
+      text-decoration:none;
+    }
+
+    a:hover{
+      text-decoration:underline;
+    }
 
     .wrap{
       max-width:1200px;
       margin:0 auto;
-      padding: clamp(24px, 5vw, 72px) clamp(16px, 4vw, 32px);
+      padding:clamp(24px, 5vw, 72px) clamp(16px, 4vw, 32px);
       min-height:100vh;
       display:flex;
       align-items:center;
@@ -59,8 +75,8 @@
       width:100%;
       border:1px solid var(--border);
       background:linear-gradient(180deg, rgba(255,255,255,.08), rgba(255,255,255,.05));
-      box-shadow: var(--shadow);
-      border-radius: var(--radius);
+      box-shadow:var(--shadow);
+      border-radius:var(--radius);
       overflow:hidden;
     }
 
@@ -127,7 +143,7 @@
     .content{
       padding:18px 22px 24px;
       display:grid;
-      grid-template-columns: 1.25fr .75fr;
+      grid-template-columns:1.25fr .75fr;
       gap:18px;
     }
 
@@ -138,7 +154,7 @@
     .card{
       border:1px solid var(--border);
       background:var(--card);
-      border-radius: var(--radius);
+      border-radius:var(--radius);
       padding:20px;
       overflow:hidden;
     }
@@ -155,40 +171,26 @@
       line-height:1.75;
     }
 
-    .cta{
-      display:flex;
-      gap:12px;
-      flex-wrap:wrap;
-      margin-top:12px;
+    .microcopy{
+      margin:8px 0 18px;
+      color:#ffffff;
+      font-weight:700;
+      line-height:1.85;
+      font-size:15px;
     }
 
-    .btn{
-      display:inline-flex;
-      align-items:center;
-      justify-content:center;
-      padding:12px 16px;
+    .warning-box{
+      margin:0 0 18px;
+      padding:14px 16px;
+      border:1px solid var(--warningBorder);
+      background:var(--warningBg);
+      color:var(--warningText);
       border-radius:14px;
-      font-weight:800;
-      border:1px solid rgba(255,255,255,.18);
-      text-decoration:none;
-      white-space:nowrap;
-    }
-
-    .btn.primary{
-      background: linear-gradient(135deg, var(--brand), var(--brand2));
-      color:#071021;
-      border:none;
-      box-shadow: 0 10px 30px rgba(79,140,255,.25);
-    }
-
-    .btn.secondary{
-      background: rgba(0,0,0,.18);
-      color:var(--text);
-    }
-
-    @media (max-width:520px){
-      .cta{flex-direction:column}
-      .btn{width:100%; white-space:normal}
+      font-size:13px;
+      line-height:1.7;
+      font-weight:900;
+      text-transform:uppercase;
+      letter-spacing:.2px;
     }
 
     .frameShell{
@@ -197,7 +199,7 @@
       overflow:hidden;
       border:1px solid var(--surfaceBorder);
       background:var(--surface);
-      box-shadow: 0 12px 30px rgba(0,0,0,.20);
+      box-shadow:0 12px 30px rgba(0,0,0,.20);
     }
 
     .frameHeader{
@@ -206,7 +208,7 @@
       justify-content:space-between;
       gap:10px;
       padding:10px 12px;
-      background: linear-gradient(180deg, rgba(245,248,255,1), rgba(255,255,255,1));
+      background:linear-gradient(180deg, rgba(245,248,255,1), rgba(255,255,255,1));
       color:var(--surfaceText);
       border-bottom:1px solid var(--surfaceBorder);
       font-size:13px;
@@ -220,15 +222,66 @@
 
     .frameShell iframe{
       width:100%;
-      height:800px;
+      height:750px;
       border:0;
       display:block;
       background:var(--surface);
-      color-scheme: light;
+      color-scheme:light;
+      max-width:650px;
+      margin:0 auto;
+      border-radius:12px;
+    }
+
+    .trust{
+      margin:14px 16px 8px;
+      text-align:center;
+      color:var(--surfaceText);
+      font-size:13px;
+      font-weight:600;
+      line-height:1.6;
+    }
+
+    .cta{
+      display:flex;
+      gap:12px;
+      flex-wrap:wrap;
+      margin-top:18px;
+    }
+
+    .btn{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      padding:12px 16px;
+      border-radius:14px;
+      font-weight:800;
+      border:1px solid rgba(255,255,255,.18);
+      text-decoration:none;
+      white-space:nowrap;
+      transition:transform .15s ease, opacity .15s ease;
+    }
+
+    .btn:hover{
+      text-decoration:none;
+      transform:translateY(-1px);
+      opacity:.96;
+    }
+
+    .btn.secondary{
+      background:rgba(0,0,0,.18);
+      color:var(--text);
     }
 
     @media (max-width:520px){
-      .frameShell iframe{height:820px}
+      .cta{flex-direction:column}
+      .btn{
+        width:100%;
+        white-space:normal;
+      }
+      .frameShell iframe{
+        height:820px;
+        max-width:100%;
+      }
     }
 
     .note{
@@ -254,13 +307,39 @@
       gap:14px;
       flex-wrap:wrap;
     }
+
+    .stickyBtn{
+      position:fixed;
+      bottom:16px;
+      left:16px;
+      right:16px;
+      background:linear-gradient(135deg, #4f8cff, #7dd3ff);
+      color:#071021;
+      font-weight:800;
+      text-align:center;
+      padding:14px;
+      border-radius:12px;
+      box-shadow:0 10px 30px rgba(0,0,0,.3);
+      z-index:999;
+      display:none;
+      text-decoration:none;
+    }
+
+    .stickyBtn:hover{
+      text-decoration:none;
+    }
+
+    @media (max-width:768px){
+      .stickyBtn{display:block;}
+      .wrap{padding-bottom:90px;}
+    }
   </style>
 </head>
 <body>
   <div class="wrap">
     <div class="shell">
 
-      <div class="topbar">
+      <div class="topbar" id="top">
         <div class="brand">
           <div class="logo">
             <img src="/assets/LOGO CLINICA EMT INGLES.png" alt="Neuro TMS Clinic">
@@ -270,6 +349,7 @@
             <p>Tijuana · Booking</p>
           </div>
         </div>
+        <div class="pill">Choose an available time</div>
       </div>
 
       <div class="content">
@@ -277,24 +357,38 @@
           <h2>Book an appointment</h2>
           <p>Select an available time on the calendar.</p>
 
+          <div class="microcopy">
+            ✔ Takes less than 1 minute<br>
+            ✔ No payment required<br>
+            ✔ Confidential consultation
+          </div>
+
+          <div class="warning-box">
+            PLEASE CALL TO CONFIRM YOUR APPOINTMENT AT 6646351809 24 TO 48 HOURS IN ADVANCE.
+          </div>
+
           <div class="frameShell">
             <div class="frameHeader">
               <div>Calendar</div>
               <span>Appointments</span>
             </div>
+
             <iframe
-              src="https://expedientemedicodrjosemanuelsegovia.abacusai.app/agendar?lang=en"
+              src="https://expedientemedicodrjosemanuelsegovia.abacusai.app/agendar/emt?lang=en"
               width="100%"
-              height="800"
-              frameborder="0"
-              style="border:none; max-width:100%; margin:0 auto; display:block;"
-              title="Book Appointment - Transcranial Magnetic Stimulation"
+              height="750"
+              style="border:none; border-radius:12px; max-width:650px;"
+              title="Book Appointment - TMS Clinic"
               allow="clipboard-write">
             </iframe>
+
+            <div class="trust">
+              Trusted by patients in Tijuana and San Diego. Your information is handled privately and securely.
+            </div>
           </div>
 
           <div class="cta">
-            <a class="btn secondary" href="/" rel="noopener">Back to landing</a>
+            <a class="btn secondary" href="/" rel="noopener">Back to main menu</a>
           </div>
 
           <div class="note">
@@ -328,6 +422,8 @@
 
     </div>
   </div>
+
+  <a href="#top" class="stickyBtn">Book now</a>
 
   <script>
     document.getElementById('y').textContent = new Date().getFullYear();
