@@ -280,7 +280,87 @@
     }
     .links{display:flex; gap:14px; flex-wrap:wrap}
   </style>
-</head>
+  <!-- ESTILO GAMMA v2 (solo visual: no cambia ningun texto, enlace ni aviso) -->
+  <style>
+    :root{ --gold:#FFC102; --navy:#0C2752; }
+    body{ background: linear-gradient(180deg,#050914,#0C2752 140%) !important; }
+    h1, h2, h3{ font-family: Georgia, 'Times New Roman', serif !important; letter-spacing:.1px; }
+    .card h2, .hcard h2{ font-size: clamp(30px, 4.5vw, 42px) !important; line-height:1.08 !important; }
+    .card h3, .hcard h3{ font-size:20px !important; }
+    .btxt h1{ font-size:20px !important; }
+    .btn, .nav-btn{ border-radius:999px !important; padding:14px 24px !important; transition: transform .15s ease, box-shadow .15s ease !important; }
+    .btn:hover, .nav-btn:hover{ transform: translateY(-1px); text-decoration:none !important; }
+    .btn.primary, .nav-btn.primary{ background: linear-gradient(135deg,#FFC102,#FFD84D) !important; color:#0C2752 !important; box-shadow:0 12px 30px rgba(255,193,2,.30) !important; border:none !important; }
+    .btn.secondary, .nav-btn:not(.primary){ background: rgba(255,255,255,.08) !important; }
+    .shell, .frameShell{ border-radius:24px !important; box-shadow:0 30px 80px rgba(0,0,0,.50) !important; }
+    .card, .hcard, .box{ border-radius:20px !important; }
+    .card, .hcard{ padding:26px !important; }
+    .pill{ border-color:rgba(255,193,2,.55) !important; color:#FFE9A3 !important; }
+    .logo{ border-color:rgba(255,193,2,.45) !important; }
+    .gamma-img{ margin:0 0 18px; }
+    .gamma-img img{ width:100%; height:340px; object-fit:cover; border-radius:20px; border:1px solid rgba(255,255,255,.16); display:block; }
+    @media (max-width:760px){ .gamma-img img{ height:230px; } }
+    .heroimg{ padding:0 22px 18px; }
+    .heroimg img{ width:100%; height:440px; object-fit:cover; object-position:center 35%; border-radius:22px; border:1px solid rgba(255,255,255,.16); display:block; }
+    @media (max-width:760px){ .heroimg img{ height:250px; } }
+    .gallery{ padding:0 22px 22px; display:grid; grid-template-columns:1fr 1fr; gap:14px; }
+    @media (max-width:760px){ .gallery{ grid-template-columns:1fr; } }
+    .gallery img{ width:100%; height:320px; object-fit:cover; border-radius:20px; border:1px solid rgba(255,255,255,.16); display:block; }
+    .preview-banner{ background:#FFC102; color:#0C2752; text-align:center; font-family:ui-sans-serif,system-ui,sans-serif; font-weight:800; font-size:14px; padding:10px 14px; }
+  </style>    <link rel="canonical" href="https://neurotmsclinic.com/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:site_name" content="Neuro TMS Clinic" />
+    <meta property="og:title" content="Transcranial Magnetic Stimulation Clinic in Tijuana | Book an appointment" />
+    <meta property="og:description" content="TMS clinic in Tijuana. Informational and administrative support for scheduling. Book in minutes." />
+    <meta property="og:url" content="https://neurotmsclinic.com/" />
+    <meta property="og:image" content="https://neurotmsclinic.com/assets/gamma-tms-cerebro.jpg" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Transcranial Magnetic Stimulation Clinic in Tijuana | Book an appointment" />
+    <meta name="twitter:description" content="TMS clinic in Tijuana. Informational and administrative support for scheduling. Book in minutes." />
+    <meta name="twitter:image" content="https://neurotmsclinic.com/assets/gamma-tms-cerebro.jpg" />
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "MedicalClinic",
+  "name": "Transcranial Magnetic Stimulation Clinic",
+  "alternateName": "Neuro TMS Clinic",
+  "url": "https://neurotmsclinic.com/",
+  "image": "https://neurotmsclinic.com/assets/gamma-tms-cerebro.jpg",
+  "telephone": "+52-664-635-1809",
+  "email": "info@estimulacionmagneticatranscranealtijuana.com",
+  "description": "TMS clinic in Tijuana. Informational and administrative support for scheduling. Book in minutes.",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Paseo de los Héroes 10999, Suite 205, Medical offices tower – Hospital Angeles Tijuana",
+    "addressLocality": "Tijuana",
+    "addressRegion": "Baja California",
+    "postalCode": "22010",
+    "addressCountry": "MX"
+  },
+  "openingHoursSpecification": [
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": [
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday"
+      ],
+      "opens": "09:00",
+      "closes": "19:00"
+    },
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": "Saturday",
+      "opens": "09:00",
+      "closes": "14:00"
+    }
+  ]
+}
+    </script>
+  </head>
 
     
 <!-- BOTÓN LLAMAR -->
@@ -320,11 +400,12 @@ WhatsApp
           <a href="/faq/">FAQ</a>
           <a href="/location-hours/">Location</a>
           <a href="/privacy-policy">Privacy</a>
+          <a href="/terms-of-service">Terms of service</a>
+          <a href="/blog/">Blog</a>
           <a href="/book/">Book</a>
         </div>
 
         <div class="nav-cta">
-          <a class="nav-btn" href="https://transcranial-stimulation-8llewd5.gamma.site/" target="_blank" rel="noopener">Full site</a>
           <a class="nav-btn primary" href="https://neurotmsclinic.com/book/" target="_blank" rel="noopener">Book</a>
         </div>
 
@@ -338,9 +419,10 @@ WhatsApp
         <a href="/benefits/">Benefits</a>
         <a href="/faq/">FAQ</a>
         <a href="/location-hours/">Location & hours</a>
+        <a href="/blog/">Blog</a>
         <a href="/privacy-policy">Privacy Policy</a>
+        <a href="/terms-of-service">Terms of service</a>
         <a class="primary" href="/book/">Book (Calendar)</a>
-        <a href="https://clinica-de-estimulacion--tlmuejr.gamma.site/" target="_blank" rel="noopener">View full site</a>
       </div>
 
       <div class="topbar">
@@ -348,6 +430,7 @@ WhatsApp
         <div class="pill">No medical diagnosis via WhatsApp · Informational channel</div>
       </div>
 
+      <div class="heroimg"><img src="/assets/gamma-tms-cerebro.jpg" alt="Equipo TMS sobre el cerebro"></div>
       <div class="hero">
         <div class="hcard">
           <div class="kicker"><span class="dot"></span> Book in minutes</div>
@@ -360,9 +443,6 @@ WhatsApp
           <div class="cta">
             <a class="btn primary" href="https://neurotmsclinic.com/book/" target="_blank" rel="noopener">
               Book / Request information
-            </a>
-            <a class="btn secondary" href="https://transcranial-stimulation-8llewd5.gamma.site/" target="_blank" rel="noopener">
-              View full site
             </a>
             <a class="btn secondary" href="/privacy-policy">Privacy Policy</a>
           </div>
@@ -418,6 +498,10 @@ WhatsApp
         </div>
       </div>
 
+      <div class="gallery">
+        <img src="/assets/gamma-sesion-clinica.jpg" alt="Sesion en la clinica">
+        <img src="/assets/gamma-hospital-angeles-en.jpg" alt="Hospital Angeles Tijuana">
+      </div>
       <div class="disclaimer">
         <strong>Notice:</strong> This website is for informational purposes only and does not replace medical advice.
         In case of emergency, contact local emergency services.
@@ -432,6 +516,8 @@ WhatsApp
           <a href="/faq/">FAQ</a>
           <a href="/location-hours/">Location</a>
           <a href="/privacy-policy">Privacy</a>
+          <a href="/terms-of-service">Terms of service</a>
+          <a href="/blog/">Blog</a>
           <a href="/book/">Book</a>
         </div>
       </div>
