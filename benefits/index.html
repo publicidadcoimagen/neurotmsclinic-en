@@ -42,10 +42,127 @@
     .footer{padding:18px 22px;border-top:1px solid rgba(255,255,255,.12);display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;color:rgba(240,246,255,.68);font-size:13px;}
     .links{display:flex;gap:14px;flex-wrap:wrap}
   </style>
-</head>
+  <!-- ESTILO GAMMA v2 (solo visual: no cambia ningun texto, enlace ni aviso) -->
+  <style>
+    :root{ --gold:#FFC102; --navy:#0C2752; }
+    body{ background: linear-gradient(180deg,#050914,#0C2752 140%) !important; }
+    h1, h2, h3{ font-family: Georgia, 'Times New Roman', serif !important; letter-spacing:.1px; }
+    .card h2, .hcard h2{ font-size: clamp(30px, 4.5vw, 42px) !important; line-height:1.08 !important; }
+    .card h3, .hcard h3{ font-size:20px !important; }
+    .btxt h1{ font-size:20px !important; }
+    .btn, .nav-btn{ border-radius:999px !important; padding:14px 24px !important; transition: transform .15s ease, box-shadow .15s ease !important; }
+    .btn:hover, .nav-btn:hover{ transform: translateY(-1px); text-decoration:none !important; }
+    .btn.primary, .nav-btn.primary{ background: linear-gradient(135deg,#FFC102,#FFD84D) !important; color:#0C2752 !important; box-shadow:0 12px 30px rgba(255,193,2,.30) !important; border:none !important; }
+    .btn.secondary, .nav-btn:not(.primary){ background: rgba(255,255,255,.08) !important; }
+    .shell, .frameShell{ border-radius:24px !important; box-shadow:0 30px 80px rgba(0,0,0,.50) !important; }
+    .card, .hcard, .box{ border-radius:20px !important; }
+    .card, .hcard{ padding:26px !important; }
+    .pill{ border-color:rgba(255,193,2,.55) !important; color:#FFE9A3 !important; }
+    .logo{ border-color:rgba(255,193,2,.45) !important; }
+    .gamma-img{ margin:0 0 18px; }
+    .gamma-img img{ width:100%; height:340px; object-fit:cover; border-radius:20px; border:1px solid rgba(255,255,255,.16); display:block; }
+    @media (max-width:760px){ .gamma-img img{ height:230px; } }
+    .heroimg{ padding:0 22px 18px; }
+    .heroimg img{ width:100%; height:440px; object-fit:cover; object-position:center 35%; border-radius:22px; border:1px solid rgba(255,255,255,.16); display:block; }
+    @media (max-width:760px){ .heroimg img{ height:250px; } }
+    .gallery{ padding:0 22px 22px; display:grid; grid-template-columns:1fr 1fr; gap:14px; }
+    @media (max-width:760px){ .gallery{ grid-template-columns:1fr; } }
+    .gallery img{ width:100%; height:320px; object-fit:cover; border-radius:20px; border:1px solid rgba(255,255,255,.16); display:block; }
+    .preview-banner{ background:#FFC102; color:#0C2752; text-align:center; font-family:ui-sans-serif,system-ui,sans-serif; font-weight:800; font-size:14px; padding:10px 14px; }
+  </style>    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:site_name" content="Neuro TMS Clinic" />
+    <meta property="og:title" content="Benefits &amp; common use-cases of TMS | Neuro TMS Clinic" />
+    <meta property="og:description" content="Benefits and commonly mentioned areas for TMS (informational). Learn what to expect and how to book in Tijuana." />
+    <meta property="og:url" content="https://neurotmsclinic.com/benefits/" />
+    <meta property="og:image" content="https://neurotmsclinic.com/assets/gamma-tms-cerebro.jpg" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Benefits &amp; common use-cases of TMS | Neuro TMS Clinic" />
+    <meta name="twitter:description" content="Benefits and commonly mentioned areas for TMS (informational). Learn what to expect and how to book in Tijuana." />
+    <meta name="twitter:image" content="https://neurotmsclinic.com/assets/gamma-tms-cerebro.jpg" />
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "Benefits & common use-cases of TMS | Neuro TMS Clinic",
+  "url": "https://neurotmsclinic.com/benefits/",
+  "isPartOf": {
+    "@type": "WebSite",
+    "name": "Neuro TMS Clinic",
+    "url": "https://neurotmsclinic.com/"
+  }
+}
+        function toggleMenu(){
+      var el = document.getElementById('mobileMenu');
+      el.classList.toggle('open');
+    }
+  </script>
+  <style>
+    .nav{padding:14px 22px;display:flex;align-items:center;justify-content:space-between;gap:12px;border-bottom:1px solid rgba(255,255,255,.10);background:rgba(0,0,0,.12);}
+    .nav .nav-left{display:flex;align-items:center;gap:12px;min-width:0}
+    .nav .logo{width:44px;height:44px;border-radius:12px;border:1px solid rgba(255,255,255,.18);background:rgba(255,255,255,.06);display:flex;align-items:center;justify-content:center;overflow:hidden;flex:0 0 auto;}
+    .nav .logo img{max-width:100%;max-height:100%;object-fit:contain}
+    .nav .brandtxt{min-width:0}
+    .nav .brandtxt .t{font-weight:900;letter-spacing:.2px;font-size:14px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+    .nav .brandtxt .s{color:rgba(240,246,255,.72);font-size:12px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+    .nav-links{display:flex;align-items:center;gap:14px;flex-wrap:wrap;font-size:13px;}
+    .nav-links a{color:rgba(240,246,255,.86);padding:8px 10px;border-radius:999px;border:1px solid rgba(255,255,255,.10);background:rgba(0,0,0,.10);text-decoration:none;}
+    .nav-links a:hover{background:rgba(0,0,0,.18)}
+    .nav-cta{display:flex;align-items:center;gap:10px;}
+    .nav-btn{display:inline-flex;align-items:center;justify-content:center;padding:10px 12px;border-radius:12px;font-weight:800;border:1px solid rgba(255,255,255,.18);background:rgba(0,0,0,.18);color:rgba(240,246,255,.92);text-decoration:none;font-size:13px;white-space:nowrap;}
+    .nav-btn.primary{background:linear-gradient(135deg,#4f8cff,#7dd3ff);color:#071021;border:none;}
+    .burger{display:none;width:42px;height:42px;border-radius:12px;border:1px solid rgba(255,255,255,.18);background:rgba(0,0,0,.18);color:rgba(240,246,255,.9);font-size:18px;line-height:1;align-items:center;justify-content:center;cursor:pointer;}
+    .mobile-menu{display:none;padding:10px 22px 18px;border-bottom:1px solid rgba(255,255,255,.10);background:rgba(0,0,0,.10);}
+    .mobile-menu a{display:block;padding:12px 12px;border-radius:14px;border:1px solid rgba(255,255,255,.10);background:rgba(0,0,0,.14);color:rgba(240,246,255,.88);text-decoration:none;margin-top:10px;font-weight:700;font-size:14px;}
+    .mobile-menu a.primary{background:linear-gradient(135deg,#4f8cff,#7dd3ff);color:#071021;border:none;}
+    @media (max-width:980px){.nav-links{display:none}.nav-cta{display:none}.burger{display:inline-flex}.mobile-menu.open{display:block}}
+  </style>
+  </head>
 <body>
   <div class="wrap">
     <div class="shell">
+      <!-- NAV -->
+      <div class="nav">
+        <div class="nav-left">
+          <div class="logo"><img src="/assets/LOGO CLINICA EMT INGLES.png" alt="Neuro TMS Clinic"></div>
+          <div class="brandtxt">
+            <div class="t">Neuro TMS Clinic</div>
+            <div class="s">Landing + Informational directory</div>
+          </div>
+        </div>
+
+        <div class="nav-links">
+          <a href="/what-is-tms/">What is TMS?</a>
+          <a href="/how-it-works/">How it works</a>
+          <a href="/benefits/">Benefits</a>
+          <a href="/faq/">FAQ</a>
+          <a href="/location-hours/">Location</a>
+          <a href="/privacy-policy">Privacy</a>
+          <a href="/terms-of-service">Terms of service</a>
+          <a href="/blog/">Blog</a>
+          <a href="/book/">Book</a>
+        </div>
+
+        <div class="nav-cta">
+          <a class="nav-btn primary" href="https://neurotmsclinic.com/book/" target="_blank" rel="noopener">Book</a>
+        </div>
+
+        <button class="burger" aria-label="Open menu" onclick="toggleMenu()">☰</button>
+      </div>
+
+      <div id="mobileMenu" class="mobile-menu">
+        <a class="primary" href="https://neurotmsclinic.com/book/" target="_blank" rel="noopener">Book / Request information</a>
+        <a href="/what-is-tms/">What is TMS?</a>
+        <a href="/how-it-works/">How it works</a>
+        <a href="/benefits/">Benefits</a>
+        <a href="/faq/">FAQ</a>
+        <a href="/location-hours/">Location & hours</a>
+        <a href="/blog/">Blog</a>
+        <a href="/privacy-policy">Privacy Policy</a>
+        <a href="/terms-of-service">Terms of service</a>
+        <a class="primary" href="/book/">Book (Calendar)</a>
+      </div>
+
       <div class="topbar">
         <div class="brand">
           <div class="logo"><img src="/assets/LOGO CLINICA EMT INGLES.png" alt="Neuro TMS Clinic"></div>
@@ -60,6 +177,8 @@
       <div class="content">
         <div class="card">
           <h2>Benefits & common use-cases (high-level)</h2>
+          <div class="gamma-img"><img src="/assets/gamma-sesion-clinica.jpg" alt="Sesion en la clinica"></div>
+
           <p>TMS is presented as an alternative or complementary approach in different contexts, depending on professional evaluation.</p>
 
           <h3>Commonly mentioned areas</h3>
@@ -75,7 +194,6 @@
           <div class="cta">
             <a class="btn primary" href="https://form.jotform.com/253035641475153" target="_blank" rel="noopener">Book / Request information</a>
             <a class="btn secondary" href="/" rel="noopener">Back to landing</a>
-            <a class="btn secondary" href="https://transcranial-stimulation-8llewd5.gamma.site/" target="_blank" rel="noopener">View full site</a>
           </div>
 
           <div class="note">Notice: Informational only. Clinical eligibility is determined during consultation.</div>
@@ -100,10 +218,15 @@
       <div class="footer">
         <div>© <span id="y"></span> Neuro TMS Clinic</div>
         <div class="links">
-          <a href="/what-is-tms/">What is TMS?</a>
+          <a href="/what-is-tms/">What is?</a>
           <a href="/how-it-works/">How it works</a>
+          <a href="/benefits/">Benefits</a>
           <a href="/faq/">FAQ</a>
           <a href="/location-hours/">Location</a>
+          <a href="/privacy-policy">Privacy</a>
+          <a href="/terms-of-service">Terms of service</a>
+          <a href="/blog/">Blog</a>
+          <a href="/book/">Book</a>
         </div>
       </div>
     </div>
