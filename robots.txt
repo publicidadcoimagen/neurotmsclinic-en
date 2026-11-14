@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
-Sitemap: https://neurotmsclinic.com/sitemap.xml
+Sitemap: https://tmstherapytijuana.com/sitemap.xml
 
